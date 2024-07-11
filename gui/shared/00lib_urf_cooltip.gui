@@ -13,15 +13,15 @@ types RaceTooltips
         }
 
         vbox = {
-            layout_policy_horizontal = expanding
-            layout_policy_vertical = expanding
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
             set_parent_size_to_minimum = yes
             margin = { 15 5 }
             margin_bottom = 12
 
             vbox = {
-                layout_policy_horizontal = expanding
-                layout_policy_vertical = expanding
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
                 margin = { 6 4 }
                 margin_bottom = 12
 
@@ -52,14 +52,14 @@ types RaceTooltips
                 }
 
                 hbox = {
-                    layout_policy_horizontal = expanding
+                    layoutpolicy_horizontal = expanding
 
                     vbox = {
-                        layout_policy_horizontal = expanding
-                        layout_policy_vertical = expanding
+                        layoutpolicy_horizontal = expanding
+                        layoutpolicy_vertical = expanding
 
                         hbox = {
-                            layout_policy_horizontal = expanding
+                            layoutpolicy_horizontal = expanding
                             spacing = 10
 
                             button = {
@@ -69,10 +69,10 @@ types RaceTooltips
                             }
 
                             text_single = {
-                                layout_policy_horizontal = expanding
+                                layoutpolicy_horizontal = expanding
                                 name = "header"
                                 text = "RACE_COOLTIP_GETNAME"
-                                font_tint_color = "[TooltipInfo.GetTintColor]"
+                                fonttintcolor = "[TooltipInfo.GetTintColor]"
                                 align = top
                                 using = Font_Type_Flavor
                                 using = Font_Size_Big
@@ -81,10 +81,10 @@ types RaceTooltips
                             expand = {}
 
                             text_single = {
-                                layout_policy_horizontal = expanding
-                                layout_policy_vertical = expanding
+                                layoutpolicy_horizontal = expanding
+                                layoutpolicy_vertical = expanding
                                 text = "[race|E]"
-                                font_tint_color = "[TooltipInfo.GetTintColor]"
+                                fonttintcolor = "[TooltipInfo.GetTintColor]"
                                 align = vcenter|right
                             }
                         }
@@ -95,10 +95,10 @@ types RaceTooltips
             vbox = {
                 spacing = 0
                 margin = { 0 10 }
-                layout_policy_horizontal = expanding
+                layoutpolicy_horizontal = expanding
 
                 container = {
-                    layout_policy_horizontal = expanding
+                    layoutpolicy_horizontal = expanding
 
                     background = {
                         texture = "gfx/interface/component_tiles/tile_window_background_popup.dds"
@@ -118,12 +118,11 @@ types RaceTooltips
                     }
 
                     text_single = {
-                        layout_policy_horizontal = expanding
+                        layoutpolicy_horizontal = expanding
                         multiline = yes
-                        maximum_size = { 400 300 }
+                        maximumsize = { 400 300 }
                         text = "RACE_DESCRIPTION"
                         align = center
-                        default_format = "#default"
                         margin_right = 20
                         margin_left = 20
                         margin_top = 5
@@ -136,7 +135,7 @@ types RaceTooltips
                 }
 
                 divider_light = {
-                    layout_policy_horizontal = expanding
+                    layoutpolicy_horizontal = expanding
                 }
 
                 spacer = {
@@ -144,14 +143,14 @@ types RaceTooltips
                 }
 
                 vbox = {
-                    layout_policy_horizontal = expanding
+                    layoutpolicy_horizontal = expanding
                     margin_top = 6
                     margin_bottom = 6
 
                     background = {
                         texture = "[GetCultureInnovationType(Concatenate('urf_phenotype_gui_illustration_', Character.MakeScope.Var('urf_phenotype').GetFlagName)).GetIcon]"
                         alpha = 0.3
-                        fit_type = centercrop
+                        fittype = centercrop
                         using = Mask_Rough_Edges
                     }
 
@@ -162,11 +161,11 @@ types RaceTooltips
                         default_format = "#low"
                     }
                     hbox = {
-                        layout_policy_horizontal = expanding
-                        layout_policy_vertical = expanding
+                        layoutpolicy_horizontal = expanding
+                        layoutpolicy_vertical = expanding
 
                         text_single = {
-                            layout_policy_horizontal = expanding
+                            layoutpolicy_horizontal = expanding
                             text = "RACE_MODIFIERS"
                             align = center
                         }
@@ -178,12 +177,12 @@ types RaceTooltips
                 }
 
                 divider_light = {
-                    layout_policy_horizontal = expanding
+                    layoutpolicy_horizontal = expanding
                     visible = "[Character.MakeScope.Var('urf_sapience').IsSet]"
                 }
 
                 vbox = {
-                    layout_policy_horizontal = expanding
+                    layoutpolicy_horizontal = expanding
                     margin_top = 6
                     margin_bottom = 6
 
@@ -206,11 +205,11 @@ types RaceTooltips
                         visible = "[Character.MakeScope.Var('urf_sapience').IsSet]"
                     }
                     hbox = {
-                        layout_policy_horizontal = expanding
-                        layout_policy_vertical = expanding
+                        layoutpolicy_horizontal = expanding
+                        layoutpolicy_vertical = expanding
 
                         text_single = {
-                            layout_policy_horizontal = expanding
+                            layoutpolicy_horizontal = expanding
                             text = "RACE_SAPIENCE_BONUSES"
                             align = center
                         }
@@ -222,7 +221,7 @@ types RaceTooltips
                 }
 
                 divider_light = {
-                    layout_policy_horizontal = expanding
+                    layoutpolicy_horizontal = expanding
                     visible = "[Character.MakeScope.Var('urf_sapience').IsSet]"
                 }
 
@@ -239,13 +238,13 @@ types RaceTooltips
                 }
 
                 hbox = {
-                    layout_policy_horizontal = expanding
-                    layout_policy_vertical = expanding
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
 
                     visible = "[Character.MakeScope.Var('urf_sapience').IsSet]"
 
                     widget = {
-                        parent_anchor = center
+                        parentanchor = center
                         size = { 400 40 }
                         position = { 5 24 }
                         allow_outside = yes
@@ -269,8 +268,8 @@ types RaceTooltips
 
                                 visible = "[LessThanOrEqualTo_CFixedPoint( Character.MakeScope.Var('urf_sapience').GetValue, '(CFixedPoint)50' )]"
 
-                                no_progress_texture = "gfx/interface/progressbars/blank.dds"
-                                progress_texture = "gfx/interface/progressbars/progress_grandeur_increase.dds"
+                                noprogresstexture = "gfx/interface/progressbars/blank.dds"
+                                progresstexture = "gfx/interface/progressbars/progress_grandeur_increase.dds"
 
                                 marker = {
                                     name = "current_value"
@@ -293,8 +292,8 @@ types RaceTooltips
 
                                 visible = "[GreaterThanOrEqualTo_CFixedPoint( Character.MakeScope.Var('urf_sapience').GetValue, '(CFixedPoint)51' )]"
 
-                                no_progress_texture = "gfx/interface/progressbars/blank.dds"
-                                progress_texture = "gfx/interface/progressbars/progress_grandeur_increase.dds"
+                                noprogresstexture = "gfx/interface/progressbars/blank.dds"
+                                progresstexture = "gfx/interface/progressbars/progress_grandeur_increase.dds"
 
                                 marker = {
                                     name = "current_value"
@@ -317,8 +316,8 @@ types RaceTooltips
 
                                 visible = "[GreaterThanOrEqualTo_CFixedPoint( Character.MakeScope.Var('urf_sapience').GetValue, '(CFixedPoint)201' )]"
 
-                                no_progress_texture = "gfx/interface/progressbars/blank.dds"
-                                progress_texture = "gfx/interface/progressbars/progress_grandeur_increase.dds"
+                                noprogresstexture = "gfx/interface/progressbars/blank.dds"
+                                progresstexture = "gfx/interface/progressbars/progress_grandeur_increase.dds"
 
                                 marker = {
                                     name = "current_value"
@@ -341,8 +340,8 @@ types RaceTooltips
 
                                 visible = "[GreaterThanOrEqualTo_CFixedPoint( Character.MakeScope.Var('urf_sapience').GetValue, '(CFixedPoint)751' )]"
 
-                                no_progress_texture = "gfx/interface/progressbars/blank.dds"
-                                progress_texture = "gfx/interface/progressbars/progress_grandeur_increase.dds"
+                                noprogresstexture = "gfx/interface/progressbars/blank.dds"
+                                progresstexture = "gfx/interface/progressbars/progress_grandeur_increase.dds"
 
                                 marker = {
                                     name = "current_value"
@@ -364,7 +363,7 @@ types RaceTooltips
                                 icon = {
                                     size = { 3 36 }
                                     position = { 15 20 }
-                                    widget_anchor = center
+                                    widgetanchor = center
                                     texture = "gfx/interface/colors/white.dds"
                                     color = { 1 1 1 1 }
                                     alpha = 0.2
@@ -395,7 +394,7 @@ types RaceTooltips
                                 icon = {
                                     size = { 3 36 }
                                     position = { 100 20 }
-                                    widget_anchor = center
+                                    widgetanchor = center
                                     texture = "gfx/interface/colors/white.dds"
                                     color = { 1 1 1 1 }
                                     alpha = 0.2
@@ -426,7 +425,7 @@ types RaceTooltips
                                 icon = {
                                     size = { 3 36 }
                                     position = { 225 20 }
-                                    widget_anchor = center
+                                    widgetanchor = center
                                     texture = "gfx/interface/colors/white.dds"
                                     color = { 1 1 1 1 }
                                     alpha = 0.2
@@ -454,7 +453,7 @@ types RaceTooltips
                                 texture = "gfx/interface/window_roco_grandeur/grandeur_bar_bracket_left.dds"
                                 size = { 29 60 }
                                 position = { -10 -10 }
-                                parent_anchor = left
+                                parentanchor = left
                             }
 
                             icon = {
@@ -462,7 +461,7 @@ types RaceTooltips
                                 texture = "gfx/interface/window_roco_grandeur/grandeur_bar_bracket_right.dds"
                                 size = { 29 60 }
                                 position = { 10 -10 }
-                                parent_anchor = right
+                                parentanchor = right
                             }
                         }
                         widget = {
@@ -474,13 +473,13 @@ types RaceTooltips
                             widget = {
                                 size = { 60 80 }
                                 position = { 0 10 }
-                                widget_anchor = center
+                                widgetanchor = center
 
                                 icon = {
                                     name = "highlight_current_level"
                                     size = { 80 80 }
                                     position = { 0 -10 }
-                                    parent_anchor = center
+                                    parentanchor = center
                                     texture = "gfx/interface/window_roco_grandeur/pin_highlight.dds"
                                     visible = "[EqualTo_string(Character.MakeScope.Var('urf_sapience_level').GetFlagName, 'low_sapient')]"
 
@@ -549,7 +548,7 @@ types RaceTooltips
                             widget = {
                                 name = "level_backgrounds"
                                 size = { 60 60 }
-                                widget_anchor = center
+                                widgetanchor = center
 
                                 ### Level background level 1
                                 icon_grandeur_level = {
@@ -563,8 +562,8 @@ types RaceTooltips
                             text_single = {
                                 raw_text = "1"
                                 align = center
-                                widget_anchor = center
-                                parent_anchor = center
+                                widgetanchor = center
+                                parentanchor = center
                                 position = { 0 -13 }
                             }
                         }
@@ -577,13 +576,13 @@ types RaceTooltips
                             widget = {
                                 size = { 60 80 }
                                 position = { 0 10 }
-                                widget_anchor = center
+                                widgetanchor = center
 
                                 icon = {
                                     name = "highlight_current_level"
                                     size = { 80 80 }
                                     position = { 0 -10 }
-                                    parent_anchor = center
+                                    parentanchor = center
                                     texture = "gfx/interface/window_roco_grandeur/pin_highlight.dds"
                                     visible = "[EqualTo_string(Character.MakeScope.Var('urf_sapience_level').GetFlagName, 'mitle_sapient')]"
 
@@ -652,7 +651,7 @@ types RaceTooltips
                             widget = {
                                 name = "level_backgrounds"
                                 size = { 60 60 }
-                                widget_anchor = center
+                                widgetanchor = center
 
                                 ### Level background level 2
                                 icon_grandeur_level = {
@@ -665,8 +664,8 @@ types RaceTooltips
                             text_single = {
                                 raw_text = "2"
                                 align = center
-                                widget_anchor = center
-                                parent_anchor = center
+                                widgetanchor = center
+                                parentanchor = center
                                 position = { 0 -13 }
                             }
                         }
@@ -679,13 +678,13 @@ types RaceTooltips
                             widget = {
                                 size = { 60 80 }
                                 position = { 0 10 }
-                                widget_anchor = center
+                                widgetanchor = center
 
                                 icon = {
                                     name = "highlight_current_level"
                                     size = { 80 80 }
                                     position = { 0 -10 }
-                                    parent_anchor = center
+                                    parentanchor = center
                                     texture = "gfx/interface/window_roco_grandeur/pin_highlight.dds"
                                     visible = "[EqualTo_string(Character.MakeScope.Var('urf_sapience_level').GetFlagName, 'ethereal_sapient')]"
 
@@ -754,7 +753,7 @@ types RaceTooltips
                             widget = {
                                 name = "level_backgrounds"
                                 size = { 60 60 }
-                                widget_anchor = center
+                                widgetanchor = center
 
                                 ### Level background level 2
                                 icon_grandeur_level = {
@@ -768,8 +767,8 @@ types RaceTooltips
                             text_single = {
                                 raw_text = "3"
                                 align = center
-                                widget_anchor = center
-                                parent_anchor = center
+                                widgetanchor = center
+                                parentanchor = center
                                 position = { 0 -13 }
                             }
                         }
