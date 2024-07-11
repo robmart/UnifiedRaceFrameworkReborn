@@ -1,0 +1,10 @@
+﻿on_game_start = {
+	effect = {
+		urf_game_start_init = yes
+	}
+}
+on_game_start_after_lobby = {
+	effect = {
+		urf_game_start_lobby_init = yes
+	}
+}

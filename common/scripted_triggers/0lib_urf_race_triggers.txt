@@ -1,0 +1,32 @@
+﻿###########################
+### URF Racial Triggers ###
+###########################
+urf_race_initialized = {
+    has_variable = urf_phenotype
+}
+
+urf_for_all_phenotypes_trigger = {
+    OR = {
+        $APPLY$ = { RACE = human }
+    }
+}
+urf_for_all_phenotypes_comparator_trigger = {
+    OR = {
+        $APPLY$ = { RACE = human COMPARATOR = $COMPARATOR$ }
+    }
+}
+urf_race_human_trigger = {
+    is_human_culture = yes
+}
+
+urf_human_phenotype_trigger = {
+    var:urf_phenotype = flag:human
+}
+
+urf_has_a_race_modifier = {
+    has_character_modifier = urf_phenotype_$RACE$_modifier
+}
+
+is_human_culture = {
+    always = yes
+}
