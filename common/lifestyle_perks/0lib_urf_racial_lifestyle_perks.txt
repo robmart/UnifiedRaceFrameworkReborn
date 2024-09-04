@@ -1,0 +1,14 @@
+﻿urf_phenotype_human_perk = {
+    lifestyle = diplomacy_lifestyle
+    tree = racial
+    position = { 0 0 }
+    icon = node_diplomacy
+
+    auto_selection_weight = {
+        value = 0
+    }
+
+    character_modifier = {
+        martial = 1
+    }
+}

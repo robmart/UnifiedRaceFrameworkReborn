@@ -20,7 +20,7 @@ urf_genotype_phenotype_threshold = {
     if = {
         limit = { urf_racial_threshold_trigger = { RACE = $RACE$ } }
         urf_set_race_phenotype = { RACE_PHENOTYPE = $RACE$ }
-        urf_base_modifier_init = { RACE = $RACE$ }
+        urf_base_perk_init = { RACE = $RACE$ }
     }
 }
 

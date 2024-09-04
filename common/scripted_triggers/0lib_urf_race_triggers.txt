@@ -23,8 +23,8 @@ urf_human_phenotype_trigger = {
     var:urf_phenotype = flag:human
 }
 
-urf_has_a_race_modifier = {
-    has_character_modifier = urf_phenotype_$RACE$_modifier
+urf_has_a_race_perk = {
+    has_perk = urf_phenotype_$RACE$_perk
 }
 
 is_human_culture = {

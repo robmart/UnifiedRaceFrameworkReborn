@@ -41,16 +41,16 @@ GetRacialSapienceLevel = {
     }
 }
 
-GetRacialModifiers = {
+GetRacialPerks = {
     type = character
 
     text = {
-        trigger = { urf_for_all_phenotypes_trigger = { APPLY = urf_has_a_race_modifier } }
-        localization_key = RACE_MODIFIERS_DISPLAYED
+        trigger = { urf_for_all_phenotypes_trigger = { APPLY = urf_has_a_race_perk } }
+        localization_key = RACE_PERKS_DISPLAYED
     }
     text = {
         trigger = { always = no }
         fallback = yes
-        localization_key = RACE_MODIFIERS_EMPTY
+        localization_key = RACE_PERKS_EMPTY
     }
 }

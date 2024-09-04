@@ -38,11 +38,11 @@ urf_base_race_init = {
             RACE_PHENOTYPE = $RACE$
         }
         urf_set_genotype_base = { RACE = $RACE$ }
-        urf_base_modifier_init = { RACE = $RACE$ }
+        urf_base_perk_init = { RACE = $RACE$ }
         urf_set_sapience_init = { VAL = $SAPIENCE_VALUE$ LEVEL = $SAPIENCE_LEVEL$ }
     }
 }
 
-urf_base_modifier_init = {
-    add_character_modifier = urf_phenotype_$RACE$_modifier
+urf_base_perk_init = {
+    add_perk = urf_phenotype_$RACE$_perk
 }

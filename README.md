@@ -24,7 +24,7 @@ In short URF works not by assigning race traits in the normal sense. CK3 traits 
 
 All of these changes to the variables act as stand ins for traits, this allows a complex percentage based inheritance of the races. These are split into two major pieces phenotype and genotype. The genotype is collected from the character's parents and put into a percentage (e.g half elf is 50% human 50% elf). Whichever percentage wins the threshold get's to be the phenotype which determines the visible "race" of the character. This is then displayed through the GUI in a separated part of the trait window.
 
-Because of this, each race can also have modifiers applied manually through the code as well. This acts like the modifiers part of the trait window. The GUI also grabs this and shows on hover over the race button which allows the player to see their bonuses. Essentially every part of URF is built to look and feel like vanilla functionality, but in the end it is much more complicated and customizable.
+Because of this, each race can also have character modifiers applied manually through the code as well. This acts like the character modifiers part of the trait window. The GUI also grabs this and shows on hover over the race button which allows the player to see their bonuses. Essentially every part of URF is built to look and feel like vanilla functionality, but in the end it is much more complicated and customizable.
 
 Finally we get to the inner workings of URF as an outline. This is more so oriented to the modder who wants to make changes or extensions, so pay attention if you want to add more races etc etc.
 ## The Inner Workings of URF
@@ -40,7 +40,7 @@ This area is roughly broken down into a few areas itself
 * Customizable Localization
 * Game Concepts
 * Game Rules
-* Modifiers
+* Perks
 * On Actions
 * Character Templates
 * Scripted Effects
@@ -60,8 +60,8 @@ human = {
 ```
 #### Game Rules
 Pretty simple, only really meant for usage with sapience. It allows you to disable sapience in your own game.
-#### Modifiers
-This doesn't need to be overwritten, but does hold the template for the race modifiers that you need. To add new ones you must have the format here `urf_phenotype$YOURRACE$_modifier`
+#### Perks
+This doesn't need to be overwritten, but does hold the template for the race perks that you need. The perks act as a replacement for the modifiers used in previous versions of the mod. To add new ones you must have the format here `urf_phenotype_$YOURRACE$_perk`
 #### On Actions
 This isn't necessary to change. However, this handles the handing out of the racial and sapience variables using the `on_game_start` on action and the `on_child_birth` look at the scripted effects stuff for more indication on what is being done here.
 #### Character Templates
@@ -86,3 +86,6 @@ Effectively what you need for localization is this:
 * Note that the race concept has to match the race name added in all of your scripted effects files. Otherwise this will not match
 
 With this guide in mind, you should now have a decent understanding of the basic workings of URF and the steps needed to extend the library.
+
+### Reborn Changes And Incompatibilities
+While the normal version of URF used modifiers to add the character modifiers, URF Reborn instead uses perks. This is to avoid having the modifiers unnecessarily show up in the modifiers portion of the character window.

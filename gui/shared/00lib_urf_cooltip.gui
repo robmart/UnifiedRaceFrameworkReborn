@@ -166,7 +166,7 @@ types RaceTooltips
 
                         text_single = {
                             layoutpolicy_horizontal = expanding
-                            text = "RACE_MODIFIERS"
+                            text = "RACE_PERKS"
                             align = center
                         }
                     }

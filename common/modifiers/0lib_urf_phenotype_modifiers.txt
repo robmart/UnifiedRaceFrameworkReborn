@@ -1,4 +1,0 @@
-﻿urf_phenotype_human_modifier = {
-	icon = feast_positive
-	martial = 1
-}
