@@ -1,5 +1,5 @@
 ﻿urf_phenotype_human_perk = {
-    lifestyle = diplomacy_lifestyle
+    lifestyle = urf_racial_lifestyle
     tree = racial
     position = { 0 0 }
     icon = node_diplomacy
